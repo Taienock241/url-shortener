@@ -1,6 +1,6 @@
 # URL Shortener Dashboard
 
-**Live site:** [Open the deployed dashboard](https://your-url-shortener-domain.example.com)
+**Live site:** [Open the deployed dashboard](https://url-shortener-dpt5.onrender.com/)
 
 > Replace the placeholder URL above with the public application URL after deploying.
 
