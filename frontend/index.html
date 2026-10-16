@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <title>Linkly | URL Shortener</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="/" aria-label="Linkly dashboard home"><span class="brand-mark">↗</span> Linkly</a>
+      <nav aria-label="Main navigation"><a class="nav-item active" href="#overview">⌂ &nbsp;Overview</a><a class="nav-item" href="#recent-links">↗ &nbsp;Recent links</a></nav>
+      <div class="sidebar-footer">Simple links.<br><strong>Clear insights.</strong></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><p class="eyebrow">URL SHORTENER</p><h1 id="overview">Good links start here.</h1><p class="subtitle">Create, share, and keep track of every link in one place.</p></div><div class="avatar" aria-label="Dashboard">L</div></header>
+      <section class="shorten-card" aria-labelledby="shorten-title">
+        <div class="card-heading"><div class="heading-icon">✦</div><div><h2 id="shorten-title">Shorten a new link</h2><p>Paste a long URL and make it ready to share.</p></div></div>
+        <form id="shorten-form" class="shorten-form"><label class="sr-only" for="url-input">URL to shorten</label><input id="url-input" name="url" type="url" placeholder="https://your-long-url.com/..." autocomplete="url" required><button id="shorten-button" type="submit"><span>Shorten URL</span><span class="button-spinner"></span></button></form>
+        <p id="form-message" class="form-message" role="alert" aria-live="polite"></p>
+        <article id="success-card" class="success-card" hidden><div class="success-icon">✓</div><div class="success-copy"><p class="success-label">YOUR SHORT LINK IS READY</p><a id="new-short-url" href="#" target="_blank" rel="noopener"></a><p id="new-original-url" class="truncate"></p></div><button id="copy-button" class="copy-button" type="button">Copy</button></article>
+      </section>
+      <section class="stats-grid" aria-label="Link analytics"><article class="stat-card"><div class="stat-icon purple">↗</div><div><p>Total links</p><strong id="total-links">—</strong></div></article><article class="stat-card"><div class="stat-icon blue">◉</div><div><p>Total clicks</p><strong id="total-clicks">—</strong></div></article><article class="stat-card"><div class="stat-icon green">✓</div><div><p>Avg. clicks / link</p><strong id="average-clicks">—</strong></div></article></section>
+      <section id="recent-links" class="links-section" aria-labelledby="recent-title"><div class="section-heading"><div><h2 id="recent-title">Recent links</h2><p>Your latest shortened URLs and their performance.</p></div><button id="refresh-button" class="refresh-button" type="button">↻ Refresh</button></div><div id="links-status" class="links-status" role="status" aria-live="polite">Loading your links…</div><div class="table-wrap"><table><thead><tr><th>Original URL</th><th>Short link</th><th>Created</th><th>Clicks</th><th><span class="sr-only">Actions</span></th></tr></thead><tbody id="links-body"></tbody></table></div><div id="empty-state" class="empty-state" hidden><div class="empty-icon">⌁</div><h3>No links yet</h3><p>Shorten your first URL above and it will appear here.</p></div></section>
+      <footer>Linkly dashboard <span>•</span> Powered by your URL Shortener API</footer>
+    </main>
+  </div>
+  <script src="/assets/script.js" defer></script>
+</body>
+</html>
