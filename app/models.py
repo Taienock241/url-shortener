@@ -8,7 +8,7 @@ from app.database import Base
 
 
 class URLRecord(Base):
-    __tablename__ = "urls"
+    __tablename__ = "urls "
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
     original_url: Mapped[str] = mapped_column(String(2048), nullable=False)
